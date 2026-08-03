@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="home">
+  <blockquote class="random-quote" id="random-quote"></blockquote>
+  <script>
+    (function () {
+      var quotes = {{ site.data.quotes | jsonify }};
+      var el = document.getElementById('random-quote');
+      if (!el || !quotes.length) return;
+      el.textContent = quotes[Math.floor(Math.random() * quotes.length)];
+    })();
+  </script>
+
+  <ul class="post-list">
+    {% for post in paginator.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%d.%m.%Y" }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        {% if post.excerpt != post.content %}
+          <p>{{ post.excerpt | strip_html }}</p>
+        {% else %}
+          <p>{{ post.content | strip_html | truncatewords: 80 }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="page-current">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="{{ '/' | relative_url }}">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

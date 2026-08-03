@@ -1,0 +1,23 @@
+title: The Great AI
+description: Не так страшен ChatGPT, как его пользователи
+url: "https://thegreatai.ru"
+lang: ru
+timezone: Europe/Moscow
+
+theme: minima
+
+minima:
+  date_format: "%d.%m.%Y"
+  show_excerpts: true
+  social_links:
+    telegram: The_Great_AI
+
+paginate: 10
+paginate_path: "/page:num/"
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+excerpt_separator: <!-- more -->
