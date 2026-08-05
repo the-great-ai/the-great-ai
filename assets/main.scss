@@ -184,6 +184,22 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
 .post-credits .post-date {
   opacity: 0.7;
 }
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  opacity: 0.7;
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+.share-btn:hover {
+  opacity: 1;
+}
 
 .notfound {
   text-align: center;
