@@ -129,6 +129,17 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   opacity: 0.6;
 }
 
+.read-more {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  opacity: 0.8;
+  font-weight: bold;
+}
+.read-more:hover {
+  opacity: 0.5;
+}
+
 .post-nav {
   display: flex;
   justify-content: space-between;
@@ -225,6 +236,13 @@ html[data-theme="dark"] {
     color: $accent;
   }
   .post-nav a:hover {
+    color: $accent-hover;
+  }
+
+  .read-more {
+    color: $accent;
+  }
+  .read-more:hover {
     color: $accent-hover;
   }
 
