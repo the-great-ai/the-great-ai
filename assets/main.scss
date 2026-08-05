@@ -129,7 +129,9 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   opacity: 0.6;
 }
 
-.read-more {
+.read-more,
+.read-more:visited,
+.read-more:focus {
   display: inline-block;
   text-decoration: none;
   color: inherit;
@@ -137,6 +139,8 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   font-weight: bold;
 }
 .read-more:hover {
+  text-decoration: none;
+  color: inherit;
   opacity: 0.5;
 }
 
